@@ -29,7 +29,7 @@ export default class Main extends Component {
         {this.state.loading ? (
           <Loader />
         ) : (
-          <Movies movies={this.state.movies} />
+          <Movies key={this.imdbID} movies={this.state.movies} />
         )}
       </div>
     );
