@@ -8,14 +8,14 @@ export default class Main extends Component {
     loading: true,
   };
   componentDidMount() {
-    fetch(`http://www.omdbapi.com/?apikey=329ffa13&s=iron`)
+    fetch(`https://www.omdbapi.com/?apikey=329ffa13&s=iron`)
       .then((res) => res.json())
       .then((data) => this.setState({ movies: data.Search, loading: false }));
   }
   searchMovie = (str, type = "all") => {
     this.setState({ loading: true });
     fetch(
-      `http://www.omdbapi.com/?apikey=329ffa13&s=${str}${
+      `https://www.omdbapi.com/?apikey=329ffa13&s=${str}${
         type !== "all" ? `&type=${type}` : ""
       }`
     )
