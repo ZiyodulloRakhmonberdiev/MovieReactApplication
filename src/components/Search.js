@@ -36,7 +36,7 @@ export default class Search extends Component {
               }
               className="btn search-btn"
             >
-              Search Movies
+              Search
             </button>
             <div>
               <label>
